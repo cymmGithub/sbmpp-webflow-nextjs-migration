@@ -1,0 +1,209 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 12.5rem;
+  padding-bottom: 5rem;
+}
+
+.header {
+  text-align: center;
+  max-width: 60rem;
+  margin: 0 auto 4rem;
+}
+
+.heading {
+  font-size: 3.5rem;
+  line-height: 1.07em;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  color: var(--color-text-medium);
+}
+
+/* Tender card */
+.tenderCard {
+  background-color: var(--color-tan-darker);
+  border: 1px solid var(--color-grey-mid);
+  border-radius: 0;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.tenderBadge {
+  display: inline-block;
+  background-color: var(--color-green-dark);
+  color: var(--color-tan-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.tenderTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3em;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-primary);
+}
+
+.tenderDescription {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tenderDescription li {
+  font-size: 1rem;
+  line-height: 1.6em;
+  color: var(--color-text-medium);
+  margin-bottom: 0.75rem;
+}
+
+/* Attachments section */
+.attachmentsCard {
+  background-color: var(--color-pure-black);
+  color: var(--color-tan-light);
+  padding: 2.5rem;
+  border-radius: 0;
+}
+
+.attachmentsHeading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--color-tan-light);
+}
+
+.attachmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.attachmentCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.attachmentPreview {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.attachmentTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-tan-light);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.previewButton,
+.downloadButton {
+  flex: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.previewButton {
+  background-color: var(--color-green-dark);
+  color: var(--color-tan-light);
+}
+
+.previewButton:hover {
+  opacity: 0.85;
+  color: var(--color-tan-light);
+}
+
+.downloadButton {
+  background-color: var(--color-tan-light);
+  color: var(--color-pure-black);
+}
+
+.downloadButton:hover {
+  opacity: 0.85;
+  color: var(--color-pure-black);
+}
+
+/* No tenders fallback */
+.noTenders {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.noTendersIcon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  color: var(--color-text-light);
+}
+
+.noTendersText {
+  font-size: 1.25rem;
+  color: var(--color-text-medium);
+}
+
+@media screen and (max-width: 991px) {
+  .section {
+    padding-top: 10rem;
+  }
+
+  .attachmentsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding-top: 8rem;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .tenderCard {
+    padding: 1.5rem;
+  }
+
+  .attachmentsCard {
+    padding: 1.5rem;
+  }
+
+  .attachmentsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+}

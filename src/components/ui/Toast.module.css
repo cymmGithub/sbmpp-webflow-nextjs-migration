@@ -1,0 +1,68 @@
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 16px 24px;
+  max-width: 340px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  border: 2px solid;
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease;
+}
+
+.toast::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.success {
+  background: var(--color-toast-bg);
+  color: var(--color-green-dark);
+  border-color: var(--color-green-light);
+}
+
+.success::before {
+  background: var(--color-green-light);
+}
+
+.error {
+  background: var(--color-toast-bg);
+  color: var(--color-error);
+  border-color: var(--color-error-border);
+}
+
+.error::before {
+  background: var(--color-error-border);
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

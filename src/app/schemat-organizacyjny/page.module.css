@@ -1,0 +1,146 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 12.5rem;
+  padding-bottom: 5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  font-size: 3.5rem;
+  line-height: 1.07em;
+}
+
+/* Org chart */
+.orgChart {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orgBox {
+  width: 100%;
+  border: 2px solid var(--color-text-primary);
+  background-color: var(--color-tan-darker);
+}
+
+.orgBoxHeading {
+  background-color: var(--color-action);
+  color: var(--color-tan-light);
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.orgBoxContent {
+  padding: 2rem 1.5rem;
+}
+
+/* Members grid */
+.membersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.memberCard {
+  text-align: center;
+  padding: 0.75rem;
+}
+
+.memberName {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--color-text-primary);
+}
+
+.memberRole {
+  font-size: 0.875rem;
+  color: var(--color-text-medium);
+}
+
+/* Komisja Rewizyjna subsection */
+.komisjaSection {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-grey-mid);
+}
+
+.komisjaHeading {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.komisjaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Connector */
+.connector {
+  width: 3px;
+  height: 3rem;
+  background-color: var(--color-text-primary);
+}
+
+/* Zarzad details */
+.memberSeparator {
+  color: var(--color-text-light);
+  font-size: 0.8rem;
+  margin: 0.25rem 0;
+  letter-spacing: 0.05em;
+}
+
+.memberDetails {
+  font-size: 0.8rem;
+  line-height: 1.4em;
+  color: var(--color-text-medium);
+  white-space: pre-line;
+}
+
+@media screen and (max-width: 991px) {
+  .section {
+    padding-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding-top: 8rem;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .membersGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .komisjaGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .orgBoxContent {
+    padding: 1.5rem 1rem;
+  }
+}
